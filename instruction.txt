@@ -1,0 +1,37 @@
+this repo is consists of the following parts:
+- models:
+    include several network models 
+- params:
+    include trained result in csv format
+- features:
+    include several feature maps visualization plot 
+- graphs:
+    include plots for trained model result
+and several python files using for training/testing
+
+- base_task.py: for training baseline model experiment
+- mtl_task.py: for training different multi task learning model experiment
+- test.py: for testing experiment on testset
+- plot_graph.py: for plotting result 
+- loader.py: a custom dataset and data loader pipeline
+- wv_mtl.py: for visualizing feature maps
+- utils.py: include some helper function
+
+
+To use the code:
+For training: 
+mtl_task.py main func contains an example of training our multi task learning model (segamentation + classification + boundingboxes)
+
+some changes for running different experiment setup:
+1. import the right model
+2. config the right path for dataset
+3. config the loss function, weights and task_order for training 
+4. config the name of experiment 
+
+For testing:
+test.py main func contains an example of testing our multi task learning model (segamentation + classification + boundingboxes)
+
+some changes for running different experiment setup:
+1. import the right model
+2. config the file_path for loading the model 
+3. config the right path for dataset
